@@ -25,7 +25,7 @@ const  userRoutes = require ('./Routes/User');
 
 const app =  express();
 app.use(logger("dev"));
-mongoose.connect('mongodb+srv://anova_96:'+process.env. MONGO_ATLAS_PW +'@cluster0.ol9y1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://anova_96:'+process.env.MONGO_ATLAS_PW +'@cluster0.ol9y1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true ,  useUnifiedTopology: true ,useCreateIndex : true
 }).then(() => {
     console.log('connected to db')

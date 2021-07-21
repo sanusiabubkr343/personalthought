@@ -118,9 +118,9 @@ router.post('/', upload.single('thoughtImage'),   function (request, response) {
 
 
 
-router.patch('/:idNo',upload.single('thoughtImage'),  function (request, response) {
+router.patch('/',upload.single('thoughtImage'),  function (request, response) {
 
-  const id =  request.params.idNo;
+  const id =  request.body.idNo;
   const image = request.file.path;
 
   //get the old data and delete it 
