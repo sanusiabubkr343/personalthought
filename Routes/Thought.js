@@ -196,9 +196,9 @@ router.patch('/updatethought',upload.single('thoughtImage'),  function (request,
 });
 
 
-router.delete('/deletethought',  async function (request, response) {
+router.delete('/deletethought',  function (request, response) {
   
-   const   id = reqeust.body.idNo;
+   const   id = request.body.idNo;
    let temp_cloud_Id ;
  
   Thought.findByIdAndDelete(id)
