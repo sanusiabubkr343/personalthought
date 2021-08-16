@@ -20,7 +20,7 @@ const cloudImageModel  = require("../Models/cloudImageModel");
 router.get('/getuserposts/:userId', function (request, response) {
 
   
-  Thought.find({user: request.params.userId})
+  Thought.find({user: request.body.userId})
    .select("_id  user title  about createdAt  thoughtImageUrl    thoughtImageCloudId ")
     .exec()
     .then(function (results) {
