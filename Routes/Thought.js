@@ -34,7 +34,7 @@ router.get('/:userId', function (request, response) {
 });
 
 
-router.post('/', upload.single('thoughtImage'),   function (request, response) {
+router.post('/userpost', upload.single('thoughtImage'),   function (request, response) {
 
   // Upload image to cloudinary
   
