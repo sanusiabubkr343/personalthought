@@ -17,7 +17,7 @@ const cloudImageModel  = require("../Models/cloudImageModel");
 
 
 
-router.get('/getuserposts', function (request, response) {
+router.get('/getuserposts/', function (request, response) {
 
   
   Thought.find({user: request.body.userId})
@@ -118,7 +118,7 @@ router.post('/userpost', upload.single('thoughtImage'),   function (request, res
 
 
 
-router.patch('/',upload.single('thoughtImage'),  function (request, response) {
+router.patch('/updatethought',upload.single('thoughtImage'),  function (request, response) {
 
   const id =  request.body.idNo;
   const image = request.file.path;
