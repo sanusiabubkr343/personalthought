@@ -241,7 +241,7 @@ router.delete('/deletethought',  function (request, response) {
     response.status(500).json({error:err});
        });
    
-   //response.status(200).json(responseObject)
+  response.status(200).json(responseObject)
   })
   .catch(function(error){
       console.log(error)
