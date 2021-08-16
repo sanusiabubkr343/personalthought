@@ -17,7 +17,7 @@ const cloudImageModel  = require("../Models/cloudImageModel");
 
 
 
-router.get('/:userId', function (request, response) {
+router.get('/getuserposts/:userId', function (request, response) {
 
   
   Thought.find({user: request.params.userId})
